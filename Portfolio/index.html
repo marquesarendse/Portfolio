@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/15060f2d0a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Images/Logo1.jpg" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-square-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="main-content">
+                <div class="header-text">
+                    <p>Fullstack Developer</p>
+                    <h1>Hi, I'm <span>Marques</span><br> a Fullstack Developer</h1>
+                </div>
+                <img src="Images/Image1.jpg" class="profile-image">
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/Image 4.jpg" class="about-image">
+                </div>
+                <div class="about-col-2">
+                    <h2>About Me</h2>
+                    <p>I am a recent IT Management graduate from Rosebank College with a solid foundation in PC
+                        components and networking systems. I have hands-on experience in website development and
+                        MySQL database management, and I am recognized for my teamwork and communication
+                        skills<p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>HTML/CSS</span><br>Designing Web interfaces</li>
+                            <li><span>JavaScript</span><br>Designing Web interfaces</li>
+                            <li><span>Python</span><br>Designing a banking app</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2021 - Noverber 2021</span><br>Build a functional pc from scratch</li>
+                            <li><span>2022 - Noverber 2022</span><br>Created a mini database using mySQL in my 2nd semester at College</li>
+                            <li><span>2023 - Noverber 2023</span><br>Created a project chart and designed a ERD for a networking project.</li>
+                            <li><span>2024 - current</span><br>Candidate at Capaciti</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2019</span><br>Matriculated at Cape Town High</li>
+                            <li><span>2024</span><br>Diploma in IT Management at Rose Bank Institute</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div class="service-item">
+                    <i class="fa-brands fa-html5"></i>
+                    <h2>HTML</h2>
+                    <p>I understand and have experience in this programming language when creating a website.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div class="service-item">
+                    <i class="fa-brands fa-js"></i>
+                    <h2>JavaScript</h2>
+                    <p>I understand and have experience in this programming language when creating a website.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div class="service-item">
+                    <i class="fa-brands fa-python"></i>
+                    <h2>Python</h2>
+                    <p>I understand and have experience in this programming language when creating a website.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div class="service-item">
+                    <i class="fa-brands fa-java"></i>
+                    <h2>Java</h2>
+                    <p>I understand and have experience in this programming language when creating a website.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="Images/Chat app.png" alt="Work 3">
+                    <div class="layer">
+                    <h3>Chat app</h3>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>  
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Images/Fashion website.png" alt="Work 2">
+                    <div class="layer">
+                        <h3>Fashion website</h3>
+                        <a href="https://github.com/marquesarendse/Fashion-set-go-OG.git"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>  
+                        </div>
+                </div>
+                <div class="work">
+                    <img src="Images/Catering website.png" alt="Work 1">
+                    <div class="layer">
+                        <h3>Catering website</h3>
+                        <a href="https://github.com/S-Makhedama/Catering---services_2.git"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>  
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Images/banking app.png" alt="Work 1">
+                    <div class="layer">
+                        <h3>Banking app</h3>
+                        <a href="https://github.com/marquesarendse/Banking-app3.git"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!----------contact------------->
+<div id="contact">
+    <h1 class="sub-title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+            <i class="fa-solid fa-envelope"></i><br>
+            <p><a href="mailto:marquesarendse@gmail.com">marquesarendse@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+            <i class="fa-brands fa-linkedin"></i>
+            <p><a href="https://www.linkedin.com/in/marques-arendse-b4737b26a/">Linkedin</a></p>
+        </div>
+    </div>     
+</div>
+    <div class="copyright">
+        <p>Coperight @ Marques Arendse <i class="fa-solid fa-face-smile-wink"></i></p>
+    </div>
+</div>
+
+    <script>
+        function opentab(tabname) {
+            const tablinks = document.getElementsByClassName("tab-links");
+            const tabcontents = document.getElementsByClassName("tab-contents");
+            
+            for (let tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (let tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");   
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+        
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+
+    </script>
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwq3_AnlRHg7YtLpAi96f__OzBJng7tZHsUZt1ZHIHZNPtZJpOTpaq20WyyXk3nmebkUw/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+      </script>
+</body>
+</html>

@@ -1,0 +1,462 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background: gray;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: auto; /* Ensure content is scrollable if needed */
+}
+
+#header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto; /* Center align the container */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 50px; /* Adjust size as needed */
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 15px; 
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.main-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px; /* Add space between sections */
+    width: 100%;
+    padding: 20px;
+}
+
+.profile-image {
+    width: 300px; /* Adjust size as needed */
+    margin-left: 35px; /* Space between image and text */
+    border-radius: 12%;
+}
+.main-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Adjust space between text and image */
+    flex-wrap: wrap; /* Ensure proper wrapping on smaller screens */
+}
+
+.header-text {
+    font-size: 30px;
+}
+
+.header-text h1 span {
+    color: #ff004f;
+}
+
+/*------about----*/
+
+#about {
+    width: 100%;
+    background: gray; /* Different background color for contrast */
+    color: #000; /* Black text for readability */
+    padding: 40px 0;
+}
+
+#about .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#about .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1,
+.about-col-2 {
+    flex: 1;
+    min-width: 300px; /* Ensure responsiveness */
+    margin: 10px;
+}
+
+.about-image {
+    width: 100%;
+    max-width: 400px; /* Control image size */
+    border-radius: 15px;
+}
+
+.about-col-2 h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.about-col-2 p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span {
+    color: #ff004f;
+    font-size: 14px;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+/*-------services-------*/
+
+#services {
+    width: 100%;
+    padding: 40px 0;
+    background: #333; /* Background color for services section */
+}
+
+#services .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.service-item {
+    background: #444;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.service-item i {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.service-item h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.service-item p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.service-item a {
+    text-decoration: none;
+    color: #ff004f;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.service-item:hover {
+    background: #ff004f;
+    transform: translateY(-10px);
+}
+
+/*-----portfolio----*/
+
+#portfolio {
+    width: 100%;
+    padding: 50px 0;
+    background: #222; /* Background color for portfolio section */
+    text-align: center;
+}
+
+#portfolio .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sub-title {
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #fff;
+}
+
+.work-list {
+    display: inline-grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 50px;
+    padding: 10px;
+    margin-top: 50px;
+}
+
+.work {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.work img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0), #333333);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+}
+.layer h3{
+    font-weight: 500;
+    font: red;
+    margin: bottom 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 45px;
+    background: black;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+
+/*-----------contact------*/
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #333333; /* Dark text color for better contrast */
+    height: 70vh;
+    padding: 50px 0;
+}
+
+.sub-title {
+    margin-bottom: 30px;
+    font-size: 50px;
+    color: #333333; /* Darken the subtitle color */
+}
+
+.contact-info-upper-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap if needed */
+    justify-content: center;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53);
+    border-color: rgb(163, 163, 163);
+    background: (250, 250, 250);
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.contact-info-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px; /* Add padding for spacing */
+    border-radius: 10px; /* Add rounded corners for a neat look */
+    background-color: #fff; /* White background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+.contact-info-container p {
+    font-size: 16px; /* Decrease font size for better fit */
+    margin: 0; /* Remove default margin */
+}
+
+.fa-envelope, .fa-linkedin {
+    font-size: 20px; /* Adjust icon size */
+}
+
+
+
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0; 
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px 0;
+
+}
+.sub-title {
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #fff;
+    position: center;
+}
+
+.copyright i{
+    color: #ff004f;
+}
+/*-----------------css for small screens--------------*/
+nav .fa-solid {
+    display: none;
+}
+/* Responsive Styles */
+@media only screen and (max-width: 600px) {
+    .profile-image {
+        width: 400px; /* Adjust size for smaller screens */
+        margin-left: 0; /* Remove margin for better alignment */
+        margin-top: 20px; /* Add space between text and image */
+    }
+    .header-text {
+        margin-top: 20px; /* Adjust top margin */
+        text-align: center; /* Center text on smaller screens */
+        font-size: 16px;
+    }
+    .header-text h1 {
+        font-size: 24px; /* Adjust font size */
+    }
+    nav .fa-solid {
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+    }
+    nav ul {
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.3s ease; /* Smooth transition for menu */
+    }
+    nav ul li a {
+        color: #fff; /* Ensure link color is white */
+        text-decoration: none; /* Remove default link underline */
+        font-size: 18px; /* Adjust font size for links */
+    }
+    nav ul li {
+        display: block; /* Ensure each item is displayed as a block */
+        margin: 25px 0; /* Adjust margin */
+        text-align: center; /* Center the text */
+    }
+    nav ul .fa-solid {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    /* Show the menu when a class is added to nav (toggle mechanism) */
+    nav.active ul {
+        right: 0; /* Bring the menu into view */
+    }
+}
+#msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
+}
